@@ -6,7 +6,7 @@
 
     <NavigationPage.TitleView>
         <StackLayout>
-            
+            <ImageButton></ImageButton>
         </StackLayout>
     </NavigationPage.TitleView>
 
