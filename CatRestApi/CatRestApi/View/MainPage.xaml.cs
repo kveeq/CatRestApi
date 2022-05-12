@@ -26,5 +26,10 @@ namespace CatRestApi.View
         {
             await Navigation.PushAsync(new CatEditPage( (Cat)e.SelectedItem) );
         }
+
+        private async void AddNavigatePageBtn_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new AddCatPage());
+        }
     }
 }

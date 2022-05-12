@@ -18,10 +18,11 @@ namespace CatRestApi.View
             InitializeComponent();
         }
 
-        private void Button_Clicked(object sender, EventArgs e)
+        private async void Button_Clicked(object sender, EventArgs e)
         {
-            Cat cat = new Cat(qw.Text, qwq.Text, qwqw.IsChecked);
-            App.TodoManager.SaveItemAsync(cat, true);
+            Cat cat = new Cat(Guid.NewGuid().ToString(), qw.Text, qwq.Text, qwqw.IsChecked);
+            await App.TodoManager.SaveItemAsync(cat, true);
+            await Navigation.PopAsync();
         }
     }
 }

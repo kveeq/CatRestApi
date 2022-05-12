@@ -6,7 +6,13 @@
 
     <NavigationPage.TitleView>
         <StackLayout>
-            <ImageButton></ImageButton>
+            <ImageButton
+                x:Name="AddNavigatePageBtn"
+                Clicked="AddNavigatePageBtn_Clicked"
+                HeightRequest="50"
+                HorizontalOptions="EndAndExpand"
+                Source="plus.jpg"
+                WidthRequest="50" />
         </StackLayout>
     </NavigationPage.TitleView>
 

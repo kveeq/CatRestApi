@@ -21,15 +21,17 @@ namespace CatRestApi.View
             BindingContext = cat;
         }
 
-        private void Button_Clicked(object sender, EventArgs e)
+        private async void Button_Clicked(object sender, EventArgs e)
         {
-            App.TodoManager.SaveItemAsync(cat);
+            await App.TodoManager.SaveItemAsync(cat);
+            await Navigation.PopAsync();
         }
 
-        private void Button_Clicked_1(object sender, EventArgs e)
+        private async void Button_Clicked_1(object sender, EventArgs e)
         {
             var todoItem = (Cat)BindingContext;
-            App.TodoManager.DeleteTodoAsync(todoItem);
+            await App.TodoManager.DeleteTodoAsync(todoItem);
+            await Navigation.PopAsync();
         }
     }
 }

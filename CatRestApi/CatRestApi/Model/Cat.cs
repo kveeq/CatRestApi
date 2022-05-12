@@ -6,8 +6,9 @@
         {
         }
 
-        public Cat(string name, string color, bool gender)
+        public Cat(string id,string name, string color, bool gender)
         {
+            this.id = id;
             this.name = name;
             this.color = color;
             this.gender = gender;

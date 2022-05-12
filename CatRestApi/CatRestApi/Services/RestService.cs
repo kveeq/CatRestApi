@@ -38,15 +38,11 @@ namespace CatRestApi.Services
                 if (httpResponseMessage.IsSuccessStatusCode)
                 {
                     Debug.WriteLine("@@@Success");
-                    App.Current.MainPage.DisplayAlert("Error", "@@@Success", "Ok");
                 }
-
-                App.Current.MainPage.DisplayAlert("Error", "@@@Succes11s", "Ok");
             }
             catch (Exception ex)
             {
                 Debug.WriteLine($"@@@@@@@@@@//// {ex.Message}");
-                App.Current.MainPage.DisplayAlert("Error",$"@@@@@@@@@@//// {ex.Message}","Ok");
             }
         }
 
